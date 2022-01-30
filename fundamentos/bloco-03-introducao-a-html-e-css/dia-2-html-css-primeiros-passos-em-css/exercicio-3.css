@@ -1,27 +1,28 @@
-body {
-  font-size: 16px;
-  line-height: 10mm;
-} 
-
 h1 {
   font-size: 65px;
   color: orange;
   font-family: sans-serif;
-  text-decoration: underline;
+  font-style: italic;
 }
 
 ul {
-  background-color: rgb(229, 248, 239);
+  background-color: orange;
+  line-height: 50px;
 }
 
 .lista {
-  color: rgb(15, 15, 182);
+  background-color: orange;
 }
 
 p {
   font-weight: 600;
   font-size: 3em;
-  font-style: oblique;
+  text-decoration: underline;
+}
+
+body {
+  font-size: 16px;
+  text-align: center;
 }
 
 #amarelo {
