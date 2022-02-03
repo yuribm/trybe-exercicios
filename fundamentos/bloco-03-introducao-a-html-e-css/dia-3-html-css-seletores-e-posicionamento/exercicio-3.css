@@ -1,0 +1,17 @@
+/** apesar do requisito 2 pedir para criar um arquivo chamado style.css, para fins de organização do repositório nomeei o arquivo como exercicio-3.css */
+
+h1, p {
+  text-align: center;
+}
+
+li:hover {
+  background-color: rgba(101, 245, 255, 0.808);
+}
+
+li:active {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+ol, ul {
+  list-style: none;
+}
