@@ -87,16 +87,13 @@ Crie uma função que exiba o conteúdo de todas as tags <p> no console.
     };
     changeElementTextStyle('p', 1, 'uppercase');
 
-    // function printElementsInConsole(element) {
-    //   let auxiliarElement = document.getElementsByTagName(element);
-    //   for(let i = 0; i < auxiliarElement.length; i += 1) {
-    //     console.log(auxiliarElement[i].innerText);
-    //   };
-    // }
-    // printElementsInConsole('p');
-
-   let teste = document.getElementsByTagName('p')
-   console.log(teste[2].innerText)
+    function printElementsInConsole(element) {
+      let auxiliarElement = document.getElementsByTagName(element);
+      for(let i = 0; i < auxiliarElement.length; i += 1) {
+        console.log(auxiliarElement[i].innerText);
+      };
+    }
+    printElementsInConsole('p');
 
   </script>
 </body>
