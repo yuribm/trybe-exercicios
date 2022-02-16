@@ -1,0 +1,54 @@
+<!-- Para este exercício foi utilizada a mesma estrutura HTML dos exercícios anteriores 
+Remova todos os elementos filhos de paiDoPai exceto pai , elementoOndeVoceEsta e primeiroFilhoDoFilho .-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+
+  <body>
+
+    <main id="paiDoPai">
+
+      <section id="pai">
+
+        <section id="primeiroFilho">teste1</section>
+
+        <section id="elementoOndeVoceEsta">teste2
+          <section id="primeiroFilhoDoFilho">teste3</section>
+          <section id="segundoEUltimoFilhoDoFilho">teste4</section>
+        </section>
+
+        Atenção!
+
+        <section id="terceiroFilho">teste5</section>
+        <section id="quartoEUltimoFilho">teste6</section>
+
+      </section>
+
+    </main>
+
+    <script>
+      // Remova todos os elementos filhos de paiDoPai exceto pai , elementoOndeVoceEsta e primeiroFilhoDoFilho .
+      let pai = document.getElementById('pai');
+      
+      for (let index = pai.childNodes.length -1; index >= 0; index -= 1) {
+        let auxiliarPai = pai.childNodes[index];
+        if(auxiliarPai.id !== 'elementoOndeVoceEsta') {
+          auxiliarPai.remove();
+        }
+      }
+
+
+      let segundoEUltimoFilhoDoFilho = document.getElementById('segundoEUltimoFilhoDoFilho');
+      segundoEUltimoFilhoDoFilho.remove();
+    </script>
+
+  </body>
+
+</html>
