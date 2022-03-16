@@ -104,19 +104,19 @@ const calculateMageAtack = () => {
 // 4 - Adicione ao objeto gameActions uma função que retorne o objeto battleMembers atualizado e faça um console.log para visualizar o resultado final do turno.
 
 const gameActions = {
-  warriorTurn: (calculateWarriorDamage) => {
-    const warriorDamage = calculateWarriorDamage();
+  warriorTurn: (callback) => {
+    const warriorDamage = callback();
     dragon.healthPoints -= warriorDamage;
     warrior.damage = warriorDamage;
   },
-  mageTurn: (calculateMageAtack) => {
-    const mageAtack = calculateMageAtack();
+  mageTurn: (callback) => {
+    const mageAtack = callback();
     dragon.healthPoints -= mageAtack.mageDamage;
     mage.damage = mageAtack.mageDamage;
     mage.mana -= mageAtack.manaConsumption;
   },
-  dragonTurn: (calculateDragonDamage) => {
-    const dragonDamage = calculateDragonDamage();
+  dragonTurn: (callback) => {
+    const dragonDamage = callback();
     mage.healthPoints -= dragonDamage;
     warrior.healthPoints -= dragonDamage;
     dragon.damage = dragonDamage;
