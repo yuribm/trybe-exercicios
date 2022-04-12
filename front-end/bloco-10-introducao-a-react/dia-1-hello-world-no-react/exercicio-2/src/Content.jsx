@@ -23,10 +23,25 @@ const conteudos = [
   },
 ];
 
+const infos = conteudos.map((element) => {
+  const { conteudo, bloco, status } = element;
+  return (
+    <div key={conteudo} className='card'>
+      <p>{`O conteúdo é: ${conteudo}`}</p>
+      <p>{`Status: ${status}`}</p>
+      <p>{`Bloco: ${bloco}`}</p>
+    </div>
+  )
+})
+
 class Content extends Component {
   render() {
     return (
-      
+      <>
+        {infos}
+      </>
     )
   }
 }
+
+export default Content
