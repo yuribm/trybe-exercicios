@@ -27,9 +27,9 @@ const infos = conteudos.map((element) => {
   const { conteudo, bloco, status } = element;
   return (
     <div key={conteudo} className='card'>
-      <p>{`O conteúdo é: ${conteudo}`}</p>
-      <p>{`Status: ${status}`}</p>
-      <p>{`Bloco: ${bloco}`}</p>
+      <p>O conteúdo é: {conteudo}</p>
+      <p>Status: {status}</p>
+      <p>Bloco: {bloco}</p>
     </div>
   )
 })
