@@ -61,32 +61,32 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 
 - [X] 7-1: _JavaScript ES6 - let, const, arrow functions e template literals_
 - [X] 7-2: _JavaScript ES6 - Fluxo de exceção e Objetos_
-- [ ] 7-3: _Primeiros passos em Jest_
-- [ ] 7-4: _[Projeto - JavaScript Testes Unitários]()_
+- [X] 7-3: _Primeiros passos em Jest_
+- [X] 7-4: _[Projeto - JavaScript Testes Unitários]()_
 
 ##### Bloco 8: Higher Order Functions do JavaScript ES6
 
-- [ ] 8-1: _JavaScript ES6 - Introdução a Higher Order Functions
-- [ ] 8-2: _JavaScript ES6 - Higher Order Functions - forEach, find, some, every, sort_
-- [ ] 8-3: _JavaScript ES6 - Higher Order Functions - map e filter_
-- [ ] 8-4: _JavaScript ES6 - Higher Order Functions - reduce_
-- [ ] 8-5: _JavaScript ES6 - spread operator, rest parameter, destructuring e mais_
-- [ ] 8-6: _[Projeto - Zoo functions]()_
+- [X] 8-1: _JavaScript ES6 - Introdução a Higher Order Functions
+- [X] 8-2: _JavaScript ES6 - Higher Order Functions - forEach, find, some, every, sort_
+- [X] 8-3: _JavaScript ES6 - Higher Order Functions - map e filter_
+- [X] 8-4: _JavaScript ES6 - Higher Order Functions - reduce_
+- [X] 8-5: _JavaScript ES6 - spread operator, rest parameter, destructuring e mais_
+- [X] 8-6: _[Projeto - Zoo functions]()_
 
 ##### Bloco 9: Assincronicidade & Callbacks
 
-- [ ] 9-1: _JavaScript Assíncrono e Callbacks_
-- [ ] 9-2: _JavaScript Assíncrono - Fetch API e async/await_
-- [ ] 9-3: _Jest - Testes Assíncronos_
-- [ ] 9-4: _[Projeto - Carrinho de Compras]()_
+- [X] 9-1: _JavaScript Assíncrono e Callbacks_
+- [X] 9-2: _JavaScript Assíncrono - Fetch API e async/await_
+- [X] 9-3: _Jest - Testes Assíncronos_
+- [X] 9-4: _[Projeto - Carrinho de Compras]()_
 
 ## Desenvolvimento Front-end :hourglass_flowing_sand:
 
 ##### Bloco 10: Introdução - React
 
-- [ ] 10-1: _'Hello, world!' no React!_
-- [ ] 10-2: _Componentes React_
-- [ ] 10-3: _[Projeto - Movie Sistema Solar]()_
+- [X] 10-1: _'Hello, world!' no React!_
+- [X] 10-2: _Componentes React_
+- [X] 10-3: _[Projeto - Movie Sistema Solar]()_
 
 ##### Bloco 11: Componentes com Estado, Eventos & Formulários com React
 
