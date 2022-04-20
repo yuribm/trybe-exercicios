@@ -1,0 +1,19 @@
+body {
+  font-size: larger;
+}
+
+.App {
+  text-align: center;
+}
+
+button {
+  margin : 5px;
+  font-size: large;
+  border-radius: 5px;
+}
+
+button:hover {  
+  transition: 500ms;
+  background-color: rgb(68, 68, 68);
+  color: white;
+}
