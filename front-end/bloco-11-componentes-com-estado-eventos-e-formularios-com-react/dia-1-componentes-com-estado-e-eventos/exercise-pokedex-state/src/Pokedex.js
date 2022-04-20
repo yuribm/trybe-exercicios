@@ -56,7 +56,7 @@ class Pokedex extends React.Component {
             >
               {element.type}
             </button>
-          })}
+          })}q
 
         </div>
 
