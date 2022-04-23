@@ -12,6 +12,7 @@ class Form extends React.Component {
   }
 
   handleChange(e) {
+    console.log(e)
     const { value } = e.target;
     this.setState({
       email: value
