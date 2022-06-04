@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/redux@latest/dist/redux.min.js"></script>
+  </head>
+
+  <body>
+
+    <div id="container">
+      <h1>Informações do primeiro Reducer:</h1>
+      <p>Nome: <span id="nome-1">Rodrigo</span></p>
+      <p>Sobrenome: <span id="sobrenome-1">Santos da Silva</span></p>
+      <p>Endereço: <span id="endereco-1">Rua Soldado Mathias, 765</span></p>
+      <p>Cidade: <span id="cidade-1">Belo Horizonte</span></p>
+    </div>
+
+    <div id="container">
+      <h1>Informações do segundo Reducer:</h1>
+      <p>Nome: <span id="nome-2">Bruna</span></p>
+      <p>Sobrenome: <span id="sobrenome-2">Santana Oliveira</span></p>
+      <p>Endereço: <span id="endereco-2">Rua Holanda, 332</span></p>
+      <p>Cidade: <span id="cidade-2">São Paulo</span></p>
+    </div>
+
+    <script>
+      const ESTADO_INICIAL_1 = {
+        nome: 'Rodrigo',
+        sobrenome: 'Santos da Silva',
+        endereco: 'Rua Soldado Mathias, 765',
+        cidade: 'Belo Horizonte',
+      };
+
+      const ESTADO_INICIAL_2 = {
+        nome: 'Bruna',
+        sobrenome: 'Santana Oliveira',
+        endereco: 'Rua Holanda, 332',
+        cidade: 'São Paulo',
+      };
+
+      const meuPrimeiroReducer = (state = ESTADO_INICIAL_1, action) => {
+        switch (action.type) {
+          // 3 - Crie actions que alterem o nome e o sobrenome dos estados iniciais, e adapte seu respectivo reducer.
+          case 'ALTERA_ESTADO_1':
+            return {
+              ...state,
+              nome: action.nome,
+              sobrenome: action.sobrenome,
+            }
+          default:
+            return {...state };
+        }
+      };
+
+      const meuSegundoReducer = (state = ESTADO_INICIAL_2, action) => {
+        switch (action.type) {
+          // 3 - Crie actions que alterem o nome e o sobrenome dos estados iniciais, e adapte seu respectivo reducer.
+          case 'ALTERA_ESTADO_2':
+            return {
+              ...state,
+              nome: action.nome,
+              sobrenome: action.sobrenome,
+            }
+          default:
+            return { ...state };
+        }
+      };
+
+      // 1 - Combine os reducers existentes com a função combineReducers e salve-o em uma constante.
+
+      const rootReducer = Redux.combineReducers({
+        meuPrimeiroReducer,
+        meuSegundoReducer,
+      });
+
+      // 2 - Crie uma store com a combinação dos reducers.
+
+      const store = Redux.createStore(rootReducer);
+
+      // 3 - Crie actions que alterem o nome e o sobrenome dos estados iniciais, e adapte seu respectivo reducer.
+
+      function alteraEstado1(nome, sobrenome) {
+        return {
+          type: 'ALTERA_ESTADO_1',
+          nome,
+          sobrenome,
+        }
+      };
+
+      function alteraEstado2(nome, sobrenome) {
+        return {
+          type: 'ALTERA_ESTADO_2',
+          nome,
+          sobrenome,
+        }
+      };
+
+      // 4 - Crie dispatchs para alterar os nomes após alguns segundos depois que a página carregar. Segue uma dica de como resolver este exercício:
+
+      window.onload = () => {
+          setTimeout(() => {
+            //Seu dispatch vem aqui //
+            store.dispatch(alteraEstado1('Fulano', 'de Tal'));
+            store.dispatch(alteraEstado2('Cicrana', 'de Tal'))
+          }, 3000);
+        };
+
+        // 5 - Adicione um store.subscribe() para atualizar as informações na página de acordo com o que temos armazenado na store. Quando a página carregar o nome renderizado deve ser alterado após alguns segundos.
+
+        const nomeEstado1 = document.getElementById('nome-1');
+        const sobrenomeEstado1 = document.getElementById('sobrenome-1');
+        const nomeEstado2 = document.getElementById('nome-2');
+        const sobrenomeEstado2 = document.getElementById('sobrenome-2');
+
+        store.subscribe(() => {
+          const { meuPrimeiroReducer, meuSegundoReducer } = store.getState();
+          nomeEstado1.innerText = meuPrimeiroReducer.nome;
+          sobrenomeEstado1.innerText = meuPrimeiroReducer.sobrenome;
+          nomeEstado2.innerText = meuSegundoReducer.nome;
+          sobrenomeEstado2.innerText = meuSegundoReducer.sobrenome;
+        });
+
+    </script>
+
+  </body>
+
+</html>
