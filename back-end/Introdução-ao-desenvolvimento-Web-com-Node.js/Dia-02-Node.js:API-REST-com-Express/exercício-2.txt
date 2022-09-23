@@ -1,0 +1,5 @@
+Para que é usado o código de status 401?
+
+O código 401 indica que a solicitação não foi aplicada porque não possui credenciais de autenticação válidas para o recurso de destino.
+
+Para a resposta acima consultei o site MDN web docs, disponível em https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Status/401
