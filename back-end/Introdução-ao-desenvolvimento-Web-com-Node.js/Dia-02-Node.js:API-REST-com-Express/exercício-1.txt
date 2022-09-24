@@ -1,0 +1,7 @@
+Para que é usado o código de status 400 e 422? 
+
+O código 400 indica "Bad Request", o servidor não conseguiu processar a requisição devido algum erro.
+
+O código 422 indica "Unprocessable Entity", p servidor entende o requisição e que ela está correta, mas não consegue processar.
+
+Utilizei o site Stack Overflow para as respostas acima, disponível em: https://pt.stackoverflow.com/questions/425578/usar-status-code-422-para-exce%C3%A7%C3%B5es-do-tipo-invalidargumentexception
